@@ -16933,7 +16933,7 @@
     this.initialize(mode, startPosition, loop, {});
 
     // Layer 1
-    this.text = new cjs.Text("3", "bold 15px 'Arial'");
+    this.text = new cjs.Text("3", "bold 15px 'Rubik'");
     this.text.textAlign = "center";
     this.text.lineHeight = 19;
     this.text.lineWidth = 24;
@@ -16941,7 +16941,7 @@
     this.text.parent = this;
     this.text.setTransform(7, 83.9, 0.891, 0.891);
 
-    this.text_1 = new cjs.Text("2", "bold 15px 'Arial'");
+    this.text_1 = new cjs.Text("2", "bold 15px 'Rubik'");
     this.text_1.textAlign = "center";
     this.text_1.lineHeight = 19;
     this.text_1.lineWidth = 24;
@@ -16949,7 +16949,7 @@
     this.text_1.parent = this;
     this.text_1.setTransform(-176.9, -10.1, 0.891, 0.891);
 
-    this.text_2 = new cjs.Text("1", "bold 15px 'Arial'");
+    this.text_2 = new cjs.Text("1", "bold 15px 'Rubik'");
     this.text_2.textAlign = "center";
     this.text_2.lineHeight = 19;
     this.text_2.lineWidth = 24;
@@ -53012,19 +53012,19 @@
       );
     this.shape_26.setTransform(-49.3, 26.5);
 
-    this.text = new cjs.Text("z", "16px 'Arial'", "#937B6C");
+    this.text = new cjs.Text("z", "16px 'Rubik'", "#937B6C");
     this.text.textAlign = "center";
     this.text.lineHeight = 20;
     this.text.parent = this;
     this.text.setTransform(76.6, -64.6);
 
-    this.text_1 = new cjs.Text("z", "16px 'Arial'", "#937B6C");
+    this.text_1 = new cjs.Text("z", "16px 'Rubik'", "#937B6C");
     this.text_1.textAlign = "center";
     this.text_1.lineHeight = 20;
     this.text_1.parent = this;
     this.text_1.setTransform(76.6, -64.6);
 
-    this.text_2 = new cjs.Text("z", "16px 'Arial'", "#937B6C");
+    this.text_2 = new cjs.Text("z", "16px 'Rubik'", "#937B6C");
     this.text_2.textAlign = "center";
     this.text_2.lineHeight = 20;
     this.text_2.parent = this;
@@ -53098,7 +53098,7 @@
                 p: {
                   x: 76.6,
                   y: -64.6,
-                  font: "16px 'Arial'",
+                  font: "16px 'Rubik'",
                   lineHeight: 19.9,
                   lineWidth: 8,
                 },
@@ -53142,7 +53142,7 @@
                 p: {
                   x: 76.6,
                   y: -64.6,
-                  font: "16px 'Arial'",
+                  font: "16px 'Rubik'",
                   lineHeight: 19.9,
                   lineWidth: 8,
                 },
@@ -53152,7 +53152,7 @@
                 p: {
                   x: 84.9,
                   y: -79.6,
-                  font: "18px 'Arial'",
+                  font: "18px 'Rubik'",
                   lineHeight: 22.1,
                   lineWidth: 9,
                 },
@@ -53197,7 +53197,7 @@
                 p: {
                   x: 84.9,
                   y: -79.6,
-                  font: "18px 'Arial'",
+                  font: "18px 'Rubik'",
                   lineHeight: 22.1,
                   lineWidth: 9,
                 },
@@ -53207,7 +53207,7 @@
                 p: {
                   x: 94.3,
                   y: -93,
-                  font: "20px 'Arial'",
+                  font: "20px 'Rubik'",
                   lineHeight: 24.35,
                   lineWidth: 10,
                 },
@@ -53386,7 +53386,7 @@
     this.instance.parent = this;
     this.instance.setTransform(-142, 17.8, 1, 1, 0, 0, 0, -1.7, 7.5);
 
-    this.text = new cjs.Text("המשחק מושהה", "bold 22px 'Arial'", "#333333");
+    this.text = new cjs.Text("המשחק מושהה", "bold 22px 'Rubik'", "#333333");
     this.text.textAlign = "center";
     this.text.lineHeight = 27;
     this.text.lineWidth = 180;
@@ -53395,7 +53395,7 @@
 
     this.text_1 = new cjs.Text(
       'לחץ על כפתור "המשך"\nכדי להמשיך לשחק',
-      "bold 18px 'Arial'",
+      "bold 18px 'Rubik'",
       "#333333"
     );
     this.text_1.textAlign = "center";
@@ -57030,7 +57030,7 @@
       );
     this.shape_115.setTransform(233.9, -254.5);
 
-    this.text = new cjs.Text("מכונת הדובונים", "bold 33px 'Arial'", "#FFFFFF");
+    this.text = new cjs.Text("מכונת הדובונים", "bold 33px 'Rubik'", "#FFFFFF");
     this.text.textAlign = "center";
     this.text.lineHeight = 39;
     this.text.lineWidth = 294;
@@ -57519,7 +57519,7 @@
     this.AgainBTN.parent = this;
     this.AgainBTN.setTransform(132.7, 103.6, 1.208, 1.208, 0, 0, 0, 0.1, 0.1);
 
-    this.SubjectTXT = new cjs.Text("", "bold 18px 'Arial'");
+    this.SubjectTXT = new cjs.Text("", "bold 18px 'Rubik'");
     this.SubjectTXT.name = "SubjectTXT";
     this.SubjectTXT.textAlign = "center";
     this.SubjectTXT.lineHeight = 22;
@@ -57528,7 +57528,7 @@
     this.SubjectTXT.parent = this;
     this.SubjectTXT.setTransform(2.8, -154.7, 1.208, 1.208);
 
-    this.text = new cjs.Text("המשחק הסתיים!", "bold 30px 'Arial'");
+    this.text = new cjs.Text("המשחק הסתיים!", "bold 30px 'Rubik'");
     this.text.textAlign = "center";
     this.text.lineHeight = 36;
     this.text.lineWidth = 239;
@@ -57536,7 +57536,7 @@
     this.text.parent = this;
     this.text.setTransform(1.6, -202.6, 1.208, 1.208);
 
-    this.muchTime = new cjs.Text("זמן כולל:", "bold 18px 'Arial'");
+    this.muchTime = new cjs.Text("זמן כולל:", "bold 18px 'Rubik'");
     this.muchTime.name = "muchTime";
     this.muchTime.textAlign = "center";
     this.muchTime.lineHeight = 22;
@@ -57545,7 +57545,7 @@
     this.muchTime.parent = this;
     this.muchTime.setTransform(-106.3, -61.5, 1.208, 1.208);
 
-    this.gardeTxt = new cjs.Text("הציון שלך הוא:", "bold 18px 'Arial'");
+    this.gardeTxt = new cjs.Text("הציון שלך הוא:", "bold 18px 'Rubik'");
     this.gardeTxt.name = "gardeTxt";
     this.gardeTxt.textAlign = "center";
     this.gardeTxt.lineHeight = 22;
@@ -57554,7 +57554,7 @@
     this.gardeTxt.parent = this;
     this.gardeTxt.setTransform(123.6, -62.6, 1.208, 1.208);
 
-    this.TimeScore = new cjs.Text("", "bold 20px 'Arial'", "#4D3C32");
+    this.TimeScore = new cjs.Text("", "bold 20px 'Rubik'", "#4D3C32");
     this.TimeScore.name = "TimeScore";
     this.TimeScore.textAlign = "center";
     this.TimeScore.lineHeight = 24;
@@ -57563,7 +57563,7 @@
     this.TimeScore.parent = this;
     this.TimeScore.setTransform(-107.8, -29.5, 1.208, 1.208);
 
-    this.ScoreTxt = new cjs.Text("", "bold 20px 'Arial'", "#4D3C32");
+    this.ScoreTxt = new cjs.Text("", "bold 20px 'Rubik'", "#4D3C32");
     this.ScoreTxt.name = "ScoreTxt";
     this.ScoreTxt.textAlign = "center";
     this.ScoreTxt.lineHeight = 24;
@@ -66307,7 +66307,7 @@
 
     this.text = new cjs.Text(
       ' אוי!\nנגמר הזמן...\nלחץ על כפתור "המשך"\nעל מנת להמשיך לשאלה הבאה',
-      "bold 18px 'Arial'"
+      "bold 18px 'Rubik'"
     );
     this.text.textAlign = "center";
     this.text.lineHeight = 22;
@@ -66727,15 +66727,14 @@
       WebFontConfig = {
         google: {
           //שנו לשם הפונט שתרצו להשתמש בו
-          families: ["Assistant"],
+          families: ["Rubik"],
         },
       };
 
       (function () {
         var wf = document.createElement("script");
         wf.src =
-          ("https" == document.location.protocol ? "https" : "http") +
-          "://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js";
+          "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js";
         wf.type = "text/javascript";
         wf.async = true;
         var s = document.getElementsByTagName("script")[0];
@@ -66875,23 +66874,23 @@
         gameCodeUser = myJSON.id; //משתנה - קוד המשחק
         fillArray();
         //שליחת בקשה
-        $.post("/Handler.ashx", {
-          gameCode: gameCodeUser,
-        })
-          .done(function (response) {
-            if (response === "המשחק לא פורסם") {
-              stage.getChildByName("myComb").choosedTXT.text = "המשחק לא פורסם";
-            } else if (response === "לא נמצא משחק") {
-              stage.getChildByName("myComb").choosedTXT.text =
-                "קוד המשחק אינו קיים";
-            } else {
-              myJSON = JSON.parse(response);
-              fillArray();
-            }
-          })
-          .fail(function () {
-            console.log("error");
-          });
+        // $.post("/Handler.ashx", {
+        //   gameCode: gameCodeUser,
+        // })
+        //   .done(function (response) {
+        //     if (response === "המשחק לא פורסם") {
+        //       stage.getChildByName("myComb").choosedTXT.text = "המשחק לא פורסם";
+        //     } else if (response === "לא נמצא משחק") {
+        //       stage.getChildByName("myComb").choosedTXT.text =
+        //         "קוד המשחק אינו קיים";
+        //     } else {
+        //       myJSON = JSON.parse(response);
+        //       fillArray();
+        //     }
+        //   })
+        //   .fail(function () {
+        //     console.log("error");
+        //   });
       }
 
       function fillArray() {
@@ -66998,11 +66997,11 @@
         bgGame.name = "bgGame1";
         bgGame.x = middleX;
         bgGame.y = middleY;
-        bgGame.TopQ["timeforQuestion"].font = "bold 18px Assistant";
-        bgGame.TopQ["secoundTxt"].font = "bold 20px Assistant";
-        bgGame.TopQ.Subject.font = "bold 20px Assistant";
-        bgGame.TopQ["Qtxt"].font = "bold 20px Assistant";
-        bgGame.horaotTXT.font = "bold 16px Assistant";
+        bgGame.TopQ["timeforQuestion"].font = "bold 18px Rubik";
+        bgGame.TopQ["secoundTxt"].font = "bold 20px Rubik";
+        bgGame.TopQ.Subject.font = "bold 20px Rubik";
+        bgGame.TopQ["Qtxt"].font = "bold 20px Rubik";
+        bgGame.horaotTXT.font = "bold 16px Rubik";
         stage.addChild(bgGame);
         createjs.Sound.play("203099__lemoncreme__groove-music", {
           loop: 1,
@@ -67219,17 +67218,17 @@
           bgGame.TopQ.Question.lineWidth = 350; // מיסגור נכון של הטקסט בגזע השאלה
           bgGame.TopQ.Question.x = 150;
           picq.name = "inQpic";
-          bgGame.TopQ.Question.font = "bold 18px Assistant";
+          bgGame.TopQ.Question.font = "bold 18px Rubik";
           bgGame.TopQ.Question.textAlign = "right";
           if (ga2[qNum][1][0].length > 40) {
-            bgGame.TopQ.Question.font = "bold 14px Assistant";
+            bgGame.TopQ.Question.font = "bold 14px Rubik";
             bgGame.TopQ.Question.x = 280;
           } else if (ga2[qNum][1][0].length > 70) {
-            bgGame.TopQ.Question.font = "bold 12px Assistant";
+            bgGame.TopQ.Question.font = "bold 12px Rubik";
             bgGame.TopQ.Question.x = 280;
           } else if (ga2[qNum][1][0].length > 90) {
             // אם כן ארוכה מ120 תווים
-            bgGame.TopQ.Question.font = "bold 12px Assistant";
+            bgGame.TopQ.Question.font = "bold 12px Rubik";
             bgGame.TopQ.Question.lineWidth = 550;
             bgGame.TopQ.Question.textAlign = "right";
             bgGame.TopQ.Question.x = 280;
@@ -67259,16 +67258,16 @@
 
         if (ga2[qNum][1][0].length < 120 && ga2[qNum][1][2] == "False") {
           // אם השאלה ארוכה מ לא 120 תווים
-          bgGame.TopQ.Question.font = "bold 18px Assistant";
+          bgGame.TopQ.Question.font = "bold 18px Rubik";
           bgGame.TopQ.Question.x = 0;
           bgGame.TopQ.Question.textAlign = "center";
         } else if (ga2[qNum][1][0].length > 40 && ga2[qNum][1][2] == "False") {
-          bgGame.TopQ.Question.font = "bold 14px Assistant";
+          bgGame.TopQ.Question.font = "bold 14px Rubik";
         } else if (ga2[qNum][1][0].length > 70 && ga2[qNum][1][2] == "False") {
-          bgGame.TopQ.Question.font = "bold 12px Assistant";
+          bgGame.TopQ.Question.font = "bold 12px Rubik";
         } else if (ga2[qNum][1][0].length > 90 && ga2[qNum][1][2] == "False") {
           // אם כן ארוכה מ120 תווים
-          bgGame.TopQ.Question.font = "bold 12px Assistant";
+          bgGame.TopQ.Question.font = "bold 12px Rubik";
           bgGame.TopQ.Question.lineWidth = 550;
           bgGame.TopQ.Question.textAlign = "right";
           bgGame.TopQ.Question.x = 280;
@@ -67294,12 +67293,12 @@
             if (ga2[qNum][rndOptions][0].length > 10) {
               // אם הטקסט ארוך יותר מ10 תווים
               addtxtbear.textAlign = "right";
-              addtxtbear.font = "bold 14px Assistant";
+              addtxtbear.font = "bold 14px Rubik";
               addtxtbear.x = 55;
             } else {
               // אם הוא קצר יותר מ10 תווים
               addtxtbear.textAlign = "center";
-              addtxtbear.font = "bold 18px Assistant";
+              addtxtbear.font = "bold 18px Rubik";
             }
             bgGame.addChild(createbear);
             createbear.addChild(addtxtbear); // לכל המקרים להוסיף לדובי את הטקסטים
@@ -67383,7 +67382,7 @@
               bgGame.numChildren - 1
             );
           }
-          bgGame.horaotTXT.font = "bold 16px Assistant";
+          bgGame.horaotTXT.font = "bold 16px Rubik";
           bgGame.TopQ.buttonpaused.removeEventListener("click", pausedFunc); // לא יוכל לעשות השהייה
         }
       }
@@ -67626,19 +67625,19 @@
             TotalTime = "0" + TotalTime; // תוסיף לפניו 0
           }
           Ending1.TimeScore.text = dakot + ":" + TotalTime; // הדפסת הזמן לתוך תיבת טקסט
-          Ending1.TimeScore.font = "bold 18px Assistant";
-          Ending1.muchTime.font = "bold 20px Assistant";
-          Ending1.gardeTxt.font = "bold 18px Assistant";
-          Ending1.ScoreTxt.font = "bold 20px Assistant";
+          Ending1.TimeScore.font = "bold 18px Rubik";
+          Ending1.muchTime.font = "bold 20px Rubik";
+          Ending1.gardeTxt.font = "bold 18px Rubik";
+          Ending1.ScoreTxt.font = "bold 20px Rubik";
         } else {
           Ending1.TimeScore.text = ""; // הדפסת הזמן לתוך תיבת טקסט
           Ending1.muchTime.text = "";
           Ending1.gardeTxt.x = 0;
           Ending1.gardeTxt.y = -60;
-          Ending1.gardeTxt.font = "bold 22px Assistant";
+          Ending1.gardeTxt.font = "bold 22px Rubik";
           Ending1.ScoreTxt.x = 0;
           Ending1.ScoreTxt.y = -30;
-          Ending1.ScoreTxt.font = "bold 25px Assistant";
+          Ending1.ScoreTxt.font = "bold 25px Rubik";
         }
         var ScoreSum = 0; // משתנה לשמירת הציון
         var mQ = parseInt(mArr.length); // משתנה שישמור את אורך המערך ויהפוך אותו למספר
