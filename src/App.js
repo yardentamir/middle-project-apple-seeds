@@ -3,8 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Game from "./Pages/TeddyBearGame";
 import HomePage from "./Pages/HomePage";
-import Api from "./Utilities/api";
-import { InitialState } from "./Utilities/initialState";
 
 function App() {
   // state = InitialState;
