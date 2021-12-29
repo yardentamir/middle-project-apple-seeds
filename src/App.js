@@ -1,7 +1,8 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./Components/Header";
+import Header from "./components/Header";
 import Game from "./Pages/TeddyBearGame";
+import HomePage from "./Pages/HomePage";
 import Api from "./Utilities/api";
 import { InitialState } from "./Utilities/initialState";
 
@@ -92,7 +93,8 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" exact element={<Game />} />
+          <Route path="/" exact element={<HomePage />} />
+          <Route path="/game" exact element={<Game />} />
         </Routes>
       </BrowserRouter>
     </>

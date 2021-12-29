@@ -1,5 +1,5 @@
 ﻿body {
-  direction: rtl;
+  /* direction: rtl; */
   /*padding-right: 150px;
     padding-top: 100px;
     color: black;
@@ -532,5 +532,141 @@ nav ul li a:hover {
 @media only screen and (max-width: 500px) {
   .responsive {
     width: 100%;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  background-color: #b4a5a5;
+}
+
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 17rem;
+  min-height: 100%;
+  background-color: #1f1d36;
+}
+
+.side-bar .logo-top {
+  padding: 1em;
+  background-color: #3f3351;
+}
+
+.side-bar .logo-top img {
+  width: 90%;
+  height: auto;
+}
+
+.side-bar ul {
+  padding: 1em;
+  margin: 0;
+  list-style-type: none;
+}
+
+.side-bar ul li {
+  margin: 0.5rem 0;
+  padding: 0.5em;
+  width: 100%;
+  text-align: left;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.side-bar ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.side-bar ul li:hover {
+  background-color: #864879;
+}
+
+.side-bar ul li.active {
+  background-color: #e9a6a6;
+  -webkit-transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.side-bar ul li.active a {
+  -webkit-transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  color: #864879;
+}
+
+@media (max-width: 768px) {
+  .side-bar {
+    width: 7.5rem;
+  }
+  .side-bar .logo-top img {
+    display: none;
+  }
+  .side-bar .logo-top svg {
+    width: 80%;
+    height: auto;
+  }
+  .side-bar ul li {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  .side-bar ul span {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .side-bar .logo-top svg {
+    display: none;
+  }
+}
+
+.logo-top {
+  text-align: center;
+}
+
+.logo-top a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-content {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main-content .create,
+.main-content .load,
+.main-content .settings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+div[data-view-active="false"] {
+  display: none !important;
+  color: black;
+}
+
+@media (max-width: 992px) {
+  .main-content {
+    padding: 1rem !important;
   }
 }

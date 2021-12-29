@@ -7,8 +7,8 @@ export default function Header() {
     <div>
       <div className="ui pointing menu">
         <div style={{ display: 'flex' }}>
-          <Link to="/" className="item">Flash Card Game</Link>
-          <Link to="/add" className="item">Add Card</Link>
+          <Link to="/" className="item">Home</Link>
+          <Link to="/game" className="item">Game</Link>
           <Link to="/edit" className="item">Edit Card</Link>
         </div>
       </div>
