@@ -3,17 +3,17 @@
   margin: 0;
   padding: 0;
   font-family: "Quicksand", sans-serif;
+  color: #c6cfd3;
 }
 
 body {
-  /* direction: rtl; */
-  background-color: #292027;
+  direction: rtl;
+  background-color: #262335;
   font-family: SuezOne-Regular;
 }
 
 textarea {
   font-family: "Segoe UI";
-  box-sizing: border-box;
 }
 
 textarea:focus {
@@ -21,20 +21,19 @@ textarea:focus {
 }
 
 #DivGame {
-  overflow: hidden;
-  position: relative;
-  height: 85vh !important;
+  height: 85vh;
   width: 90vw;
-  margin: 0 auto !important;
+  margin-left: 15em;
 }
 
 #game {
   border: 0;
   height: 100%;
   left: 0;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   width: 100%;
+  padding-right: 19em;
 }
 
 .bounceInDown {
@@ -191,7 +190,7 @@ textarea:focus {
   right: 0;
 }
 
-@media only screen and (max-width: 700px) {
+/* @media only screen and (max-width: 700px) {
   .responsive {
     width: 49.99999%;
     margin: 2px 0;
@@ -202,7 +201,7 @@ textarea:focus {
   .responsive {
     width: 100%;
   }
-}
+} */
 
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
@@ -219,11 +218,12 @@ main {
   width: 17rem;
   min-height: 100%;
   background-color: #1f1d36;
+  border-left: 1px solid #464450;
 }
 
 .side-bar .logo-top {
   padding: 1em;
-  background-color: #3f3351;
+  background-color: #34233c;
 }
 
 .side-bar .logo-top img {
@@ -241,9 +241,12 @@ main {
   margin: 0.5rem 0;
   padding: 0.5em;
   width: 100%;
-  text-align: left;
-  border-radius: 10px;
+  font-size: 16px;
   cursor: pointer;
+}
+
+.side-bar ul li > * {
+  padding: 0 5px;
 }
 
 .side-bar ul li a {
@@ -252,17 +255,20 @@ main {
 }
 
 .side-bar ul li:hover {
-  background-color: #864879;
+  background-color: #34233c;
 }
 
 .side-bar ul li.active {
-  background-color: #e9a6a6;
-  -webkit-transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  border-bottom: 4px solid;
+  border-image-slice: 1;
+  /* border-width: 4px; */
+  /* box-sizing: content-box; */
+  border-image: linear-gradient(to right, #fb29a8, #04edf9);
+  border-image-slice: 1;
   transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .side-bar ul li.active a {
-  -webkit-transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   color: #864879;
 }
@@ -280,10 +286,18 @@ main {
   }
   .side-bar ul li {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
+
   .side-bar ul span {
     display: none;
+  }
+
+  #DivGame {
+    margin-left: 7em;
+  }
+  #game {
+    padding-right: 10em;
   }
 }
 

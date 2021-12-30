@@ -1,10 +1,8 @@
 import React from 'react';
-import '../styles/StyleSheet1.css';
 
 export default function TeddyGamePage() {
   return (
-
-    <div id="DivGame">
+    <div id="DivGame" className="main-content w-100 p-5">
       <iframe
         id="game"
         alt="fds"
@@ -12,6 +10,5 @@ export default function TeddyGamePage() {
         title="he"
       ></iframe>
     </div>
-
   )
 }
