@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Game from "./Pages/TeddyBearGame";
 import HomePage from "./Pages/HomePage";
 import "./styles/myStyle.css";
+import { UserContext } from "./context/userContext";
+import InitialState from "./Utilities/initialState";
 
 function App() {
-  // state = InitialState;
+  const [value, setValue] = useState(InitialState);
 
   // componentDidMount = () => {
   //   this.start();
@@ -91,10 +93,12 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
-        <Routes>
-          <Route path="/" exact element={<HomePage />} />
-          <Route path="/game" exact element={<Game />} />
-        </Routes>
+        <UserContext.Provider value={{ value, setValue }}>
+          <Routes>
+            <Route path="/" exact element={<HomePage />} />
+            <Route path="/game" exact element={<Game />} />
+          </Routes>
+        </UserContext.Provider>
       </BrowserRouter>
     </>
   );
