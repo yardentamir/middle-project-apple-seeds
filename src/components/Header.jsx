@@ -18,14 +18,14 @@ export default function Header() {
               </span>
             </li>
           </Link>
-          <Link to="/game" style={{ width: '100%' }} >
+          {/* <Link to="/game" style={{ width: '100%' }} >
             <li className="nav-tab" data-view-name="load">
               <i className="fas fa-gamepad"></i>
               <span>
                 משחקים
               </span>
             </li>
-          </Link>
+          </Link> */}
           <li className="nav-tab" data-view-name="settings">
             <i className="fas fa-sliders-h"></i>
             <span>
