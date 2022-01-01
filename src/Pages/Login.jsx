@@ -1,16 +1,15 @@
 import React, { useContext } from 'react';
 import { authWithGoogle } from "../Context/userContext";
-import { UserContext } from '../Context/userContext';
+import { DataContext } from '../Context/dataContext';
 
-export default function Login() {
-  const { value, setUser } = useContext(UserContext);
+export default function TeddyGamePage() {
+  const { data } = useContext(DataContext);
   return (
     <div className="main-content">
-      <div className="create">
+      {console.log(data)}
+      <div className="create" >
         <button onClick={authWithGoogle}>LOGIN</button>
         <h1>CREATE</h1>
-        <div>{JSON.stringify(value)}</div>
-        <div onClick={() => setUser("hey")}>change value</div>
       </div>
     </div>
   )
