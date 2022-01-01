@@ -90,17 +90,15 @@ function App() {
   // };
 
   return (
-    <>
-      <BrowserRouter>
-        <Header />
-        <UserContext.Provider value={{ value, setValue }}>
-          <Routes>
-            <Route path="/" exact element={<HomePage />} />
-            <Route path="/game" exact element={<Game />} />
-          </Routes>
-        </UserContext.Provider>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Header />
+      <UserContext.Provider value={{ value, setValue }}>
+        <Routes>
+          <Route path="/" exact element={<HomePage />} />
+          <Route path="/game" exact element={<Game />} />
+        </Routes>
+      </UserContext.Provider>
+    </BrowserRouter>
   );
 }
 
