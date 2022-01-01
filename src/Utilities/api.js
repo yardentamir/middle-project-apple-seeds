@@ -1,34 +1,22 @@
-import axios from "axios";
+const axios = require("axios").default;
 
-const baseUrl = axios.create({
-  baseURL: "https://61c7080e90318500175472ca.mockapi.io/Cards-questions",
-});
+const options = {
+  method: "GET",
+  url: "https://random-recipes.p.rapidapi.com/ai-quotes/15",
+  headers: {
+    "x-rapidapi-host": "random-recipes.p.rapidapi.com",
+    "x-rapidapi-key": "324986073amsheb4b1761cee33bap1a6db6jsn26e8c3131db9",
+  },
+};
 
-export default class api {
-  static getItems = async () => {
-    const { data } = await baseUrl.get("/");
-    return data;
-  };
-
-  static deleteItem = async (id) => {
-    return await baseUrl.delete("/" + id);
-  };
-
-  static addItem = async (item) => {
-    const post = await baseUrl.post("/", item);
-    return post;
-  };
-
-  static editItem = async (id, item) => {
-    await baseUrl.put(`/${id}`, item);
-  };
-
-  // static async countRights() {
-  //   const data = await this.getItems();
-  //   return data.filter((item) => item.wasRight).length;
-  // }
-
-  // static async getItemById(id) {
-  //   return await this.getItems().find((item) => item.id === id);
-  // }
-}
+export const getRandomRecipes = async () => {
+  return axios
+    .request(options)
+    .then(function (response) {
+      console.log(response.data);
+      return response.data;
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
+};

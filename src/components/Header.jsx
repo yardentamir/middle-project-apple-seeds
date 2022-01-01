@@ -39,13 +39,3 @@ export default function Header() {
   )
 
 }
-
-    // <div>
-    //   <div classNameNameName="ui pointing menu">
-    //     <div style={{ display: 'flex' }}>
-    //       <Link to="/" >Home</Link>
-    //       <Link to="/game" >Game</Link>
-    //       <Link to="/edit" >Edit Card</Link>
-    //     </div>
-    //   </div>
-    // </div>
