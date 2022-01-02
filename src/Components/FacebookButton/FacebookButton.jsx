@@ -1,6 +1,7 @@
 import React from 'react';
 import { ButtonStyled } from './style';
+import './style.scss';
 
 export default function GoogleButton({ callback, text }) {
-  return <ButtonStyled onClick={callback}>{text}</ButtonStyled>;
+  return <button onClick={callback}>{text}</button>;
 }

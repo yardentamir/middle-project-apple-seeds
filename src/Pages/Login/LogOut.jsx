@@ -1,10 +1,10 @@
+
 import React from 'react';
-import { logInWithGoogle, logOutWithGoogle, logInWithFacebook } from '../../Context/userContext';
+import { logOutWithGoogle } from '../../Context/userContext';
 import GoogleButton from '../../Components/GoogleButton/GoogleButton';
-import FacebookButton from '../../Components/FacebookButton/FacebookButton';
 import './style.scss';
 
-export default function Login() {
+export default function LoginOut() {
 
   return (
     <>
@@ -18,9 +18,9 @@ export default function Login() {
                 <h3>Log in</h3>
                 <p>We'll show you how to go to where no one has been to!</p>
                 <div className="social-login">
-                  <GoogleButton callback={logInWithGoogle} text="Sign in with Google" />
-                  <FacebookButton callback={logInWithFacebook} text="Sign in with Facebook" />
+                  <GoogleButton callback={logOutWithGoogle} text="Log Out" />
                 </div>
+
               </div>
             </div>
           </div>

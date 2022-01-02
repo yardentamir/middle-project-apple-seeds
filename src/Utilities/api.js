@@ -1,4 +1,4 @@
-const axios = require("axios").default;
+import axios from "axios";
 
 const options = {
   method: "GET",
@@ -13,9 +13,36 @@ export const getRandomRecipes = async () => {
   return axios
     .request(options)
     .then(function (response) {
+      console.log(response.data);
       return response.data;
     })
     .catch(function (error) {
       console.error(error);
     });
 };
+
+const apiURL = "https://api.edamam.com/search?q=";
+const apiKey = "&app_key=37cd8d5d46ed6cdbf21f4dfbea7f3aff";
+const apiId = "&app_id=d02cac84";
+const maxTime = "&time=30";
+const maxIngreds = `&ingr=10`;
+
+const fetchRecipes = async (...ingredients) => {
+  const mappedIngreds = ingredients
+    .map((ingredient, idx) => {
+      if (idx < ingredients.length - 1) {
+        return ingredient + "+";
+      } else {
+        return ingredient;
+      }
+    })
+    .join("");
+
+  const url = `${apiURL}${mappedIngreds}${maxIngreds}${maxTime}${apiId}${apiKey}`;
+  const res = await axios.get(url);
+  const recipes = res.data;
+  console.log(recipes);
+  // addToList(recipes)
+};
+
+fetchRecipes("zucchini", "broccoli", "carrots");

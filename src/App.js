@@ -10,12 +10,11 @@ import { UserProvider } from "./Context/userContext";
 function App() {
   return (
     <BrowserRouter>
-      <Header />
       <DataProvider>
         <UserProvider>
+          <Header />
           <Routes>
-            <Route path="/" exact element={<Login />} />
-            <Route path="/homepage" exact element={<Home />} />
+            <Route path="/" exact element={<Home />} />
           </Routes>
         </UserProvider>
       </DataProvider>
