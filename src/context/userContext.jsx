@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import { signInWithPopup, onAuthStateChanged, signOut } from "firebase/auth";
 import { auth, googleProvider, facebookProvider } from "../Utilities/firebase-config";
 
@@ -27,13 +27,15 @@ export const UserContext = createContext();
 export function UserProvider({ children }) {
   const [currentUser, setCurrentUser] = useState();
 
-  onAuthStateChanged(auth, (user) => {
-    if (user !== null) {
-      setCurrentUser(user)
-    } else {
-      console.log("no");
-    }
-  });
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user !== null) {
+        setCurrentUser(user)
+      } else {
+        setCurrentUser("")
+      }
+    });
+  }, [])
 
 
   return (

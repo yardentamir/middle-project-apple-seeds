@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-import { getRandomRecipes } from "../Utilities/api";
+import { getRandomRecipes, } from "../Utilities/api";
 
 export const DataContext = createContext();
 
@@ -8,7 +8,9 @@ export function DataProvider({ children }) {
 
   useEffect(() => {
     const getData = async () => {
-      setCurrentUser(await getRandomRecipes());
+      const data = await getRandomRecipes();
+      setCurrentUser(data.meals[0]);
+
     }
     getData();
   }, [])

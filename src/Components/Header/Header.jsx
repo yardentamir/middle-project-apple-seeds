@@ -10,10 +10,11 @@ import './style.scss';
 export default function Header() {
   const { currentUser } = useContext(UserContext);
   const [isSignIn, setIsSignIn] = useState(false);
-  const [isSignInClicked, setIsSignInClicked] = useState(false);
+  const [isSignInClick, setIsSignInClick] = useState(false);
 
   useEffect(() => {
     currentUser ? setIsSignIn(true) : setIsSignIn(false);
+    setIsSignInClick(false);
   }, [currentUser])
 
   return (
@@ -51,15 +52,16 @@ export default function Header() {
               <li className="nav-link">Contact</li>
               <li className="nav-item">
                 <div>{
-                  currentUser ? <button className="btn" onClick={() => setIsSignInClicked(true)}>{currentUser.providerData[0].displayName[0]}</button> : <button className="btn">Sign in</button>
+                  currentUser ? <button onClick={() => setIsSignInClick(true)} className="btn">{currentUser.providerData[0].displayName[0]}</button> : <button onClick={() => setIsSignInClick(true)} className="btn">Sign in</button>
                 }</div>
               </li>
             </ul>
           </div>
         </nav>
       </header>
-      {console.log(currentUser)}
-      {isSignIn ? <LogOut /> : <Login />}
+      {console.log(isSignIn && isSignInClick)}
+      {(isSignIn && isSignInClick) ? <LogOut /> : ""}
+      {(!isSignIn && isSignInClick) ? <Login /> : ""}
     </>
   )
 

@@ -15,7 +15,7 @@ export default function LoginOut() {
             <div className="modalContent">
               {/* <img src="https://lilbotmedia.com/Outer_space.svg" alt="space rocket" /> */}
               <div className="modalInfo">
-                <h3>Log in</h3>
+                <h3>Log Out</h3>
                 <p>We'll show you how to go to where no one has been to!</p>
                 <div className="social-login">
                   <GoogleButton callback={logOutWithGoogle} text="Log Out" />
