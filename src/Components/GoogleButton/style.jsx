@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const ButtonStyled = styled.button`
 transition: background-color .3s, box-shadow .3s;
-    
+  
 padding: 12px 16px 12px 42px;
 border: none;
 border-radius: 3px;

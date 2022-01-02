@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { DataContext } from '../../Context/dataContext';
-import { UserContext } from '../../Context/userContext';
-import { Button } from '../../Components/Button/style';
+import { UserContext, logInWithGoogle, logOutWithGoogle, logInWithFacebook } from '../../Context/userContext';
+import GoogleButton from '../../Components/GoogleButton/GoogleButton';
 import { Container } from '../../Components/styles/Container.styled';
 
 export default function Login() {
@@ -10,12 +10,16 @@ export default function Login() {
 
   return (
     <Container>
-      {/* <div>{data.displayName}</div> */}
+      {/* <div>{JSON.stringify(currentUser.displayName)}</div> */}
       {console.log(data)}
       {console.log(currentUser)}
+      <div>{JSON.stringify(currentUser)}</div>
       <div className="create" >
-        {/* <Button callback={authWithGoogle} text="LOGIN"></Button> */}
+        <GoogleButton callback={logInWithGoogle} />
+        <GoogleButton callback={logOutWithGoogle} />
+        <GoogleButton callback={logInWithFacebook} />
         <h1>CREATE</h1>
+
       </div>
     </Container>
   )
