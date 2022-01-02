@@ -18,6 +18,7 @@ background-image: url(https://cdn.freebiesupply.com/logos/large/2x/facebook-2-lo
 background-color: white;
 background-repeat: no-repeat;
 background-position: 12px 11px;
+cursor: pointer;
 
 &:hover {
   box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 2px 4px rgba(0, 0, 0, .25);

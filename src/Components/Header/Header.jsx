@@ -34,13 +34,7 @@ export default function Header() {
                   <i className="fa fa-bars"></i></button>
               </li>
 
-              <li className="nav-link">About<i className="fa fa-chevron-up"></i>
-                <ul className="nav-drop">
-                  <li>Our Team</li>
-                  <li>Our Process</li>
-                  <li>History</li>
-                </ul>
-              </li>
+              <li className="nav-link">Search Recipe</li>
 
               <li className="nav-link">Work<i className="fa fa-chevron-up"></i>
                 <ul className="nav-drop">
@@ -49,7 +43,7 @@ export default function Header() {
                 </ul>
               </li>
 
-              <li className="nav-link">Contact</li>
+              <li className="nav-link">My Favorites</li>
               <li className="nav-item">
                 <div>{
                   currentUser ? <button onClick={() => setIsSignInClick(true)} className="btn">{currentUser.providerData[0].displayName[0]}</button> : <button onClick={() => setIsSignInClick(true)} className="btn">Sign in</button>
@@ -59,7 +53,6 @@ export default function Header() {
           </div>
         </nav>
       </header>
-      {console.log(isSignIn && isSignInClick)}
       {(isSignIn && isSignInClick) ? <LogOut /> : ""}
       {(!isSignIn && isSignInClick) ? <Login /> : ""}
     </>

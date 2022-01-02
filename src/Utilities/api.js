@@ -41,16 +41,12 @@ export const fetchRecipesIngredients = async (...ingredients) => {
   const url = `${apiURL}${mappedIngreds}${maxIngreds}${maxTime}${apiId}${apiKey}`;
   const res = await axios.get(url);
   const recipes = res.data;
-  console.log(recipes);
   return recipes;
 };
-
-fetchRecipesIngredients("eggs", "carrots");
 
 export const getRandomRecipes = async () => {
   const url = `https://www.themealdb.com/api/json/v1/1/random.php`;
   const res = await axios.get(url);
   const recipes = res.data;
-  console.log(recipes);
   return recipes;
 };

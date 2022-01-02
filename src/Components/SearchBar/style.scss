@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
 .search {
   width: 100%;
   display: flex;
@@ -14,6 +12,7 @@
   min-width: 70%;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  font-family: "Poppins", sans-serif;
 
   &:focus {
     color: #cc0070;
