@@ -33,17 +33,18 @@ export default function Header() {
                 <button className="btn" id="nav-toggle">
                   <i className="fa fa-bars"></i></button>
               </li>
+              <li className="nav-link">My Favorites</li>
+              <Link to="/recipe" className="nav-link"> Search Recipes</Link>
 
-              <li className="nav-link">Search Recipe</li>
-
+              {/* 
               <li className="nav-link">Work<i className="fa fa-chevron-up"></i>
                 <ul className="nav-drop">
                   <li>Portfolio</li>
                   <li>Showcase</li>
                 </ul>
-              </li>
+              </li> */}
 
-              <li className="nav-link">My Favorites</li>
+              <Link to="/" className="nav-link">Home</Link>
               <li className="nav-item">
                 <div>{
                   currentUser ? <button onClick={() => setIsSignInClick(true)} className="btn">{currentUser.providerData[0].displayName[0]}</button> : <button onClick={() => setIsSignInClick(true)} className="btn">Sign in</button>
@@ -53,34 +54,9 @@ export default function Header() {
           </div>
         </nav>
       </header>
-      {(isSignIn && isSignInClick) ? <LogOut /> : ""}
-      {(!isSignIn && isSignInClick) ? <Login /> : ""}
+      {(isSignIn && isSignInClick) && <LogOut />}
+      {(!isSignIn && isSignInClick) && <Login />}
     </>
   )
 
 }
-
-{/* 
-    // <main>
-    //   <div classNameName="side-bar">
-    //     <div classNameName="logo-top">
-    //       <h1>לוגו</h1>
-    //     </div>
-    //     <ul classNameName="nav-links">
-    //       <Link to="/" style={{ width: '100%' }} >
-    //         <li classNameName="nav-tab active" data-view-name="create">
-    //           <i classNameName="fas fa-pencil-alt"></i>
-    //           <span>
-    //             יצירה
-    //           </span>
-    //         </li>
-    //       </Link>
-    //       <li classNameName="nav-tab" data-view-name="settings">
-    //         <i classNameName="fas fa-sliders-h"></i>
-    //         <span>
-    //           הגדרות
-    //         </span>
-    //       </li>
-    //     </ul>
-    //   </div>
-    // </main> */}

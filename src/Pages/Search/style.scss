@@ -1,0 +1,25 @@
+.multi-selection-wrapper {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  margin-top: 10px;
+  > div {
+    width: 70%;
+  }
+}
+
+.chip {
+  background-color: red;
+}
+
+.highlightOption {
+  background: red;
+  color: #fff;
+  :hover li {
+    background: red;
+  }
+}
+
+// h3{
+//   text-align: center;
+// }

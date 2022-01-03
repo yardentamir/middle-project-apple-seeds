@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Components/Header/Header";
 import Home from "./Pages/Home/Home";
 import { DataProvider } from "./Context/dataContext";
 import { UserProvider } from "./Context/userContext";
 import Recipe from "./Pages/Recipe/Recipe";
-// import "./styles/myStyle.css";
+import Search from "./Pages/Search/Search";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" exact element={<Home />} />
+            <Route path="/recipe/" exact element={<Search />} />
             <Route path="/recipe/:id" exact element={<Recipe />} />
           </Routes>
         </UserProvider>
