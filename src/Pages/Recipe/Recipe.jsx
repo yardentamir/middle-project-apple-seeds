@@ -6,11 +6,11 @@ import Button from "../../Components/Button/Button";
 import "./style.scss";
 
 export default function Recipe() {
-  const { data } = useContext(DataContext);
   const { id } = useParams();
   return (
     <Container>
-      <h1>{id}</h1>
+      <h2>{id}</h2>
+
     </Container>
   )
 }

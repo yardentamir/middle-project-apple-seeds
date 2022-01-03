@@ -31,11 +31,10 @@ export default function Search() {
   const [multiSelected, setMultiSelected] = useState('');
   const [fetchedData, setFetchedData] = useState([]);
 
-  const handelSearch = async () => {
-    const result = (await fetchRecipesIngredients(multiSelected)).hits;
-    setFetchedData(result);
-    console.log(result)
-  }
+  // const handelSearch = async () => {
+  //   const result = (await fetchRecipesIngredients(multiSelected)).hits;
+  //   setFetchedData(result);
+  // }
 
   return (
     <Container>
