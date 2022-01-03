@@ -1,34 +1,16 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, } from 'react';
+import { useParams } from "react-router-dom";
 import { DataContext } from '../../Context/dataContext';
 import { Container } from '../../Components/styles/Container.styled';
-import SearchBar from '../../Components/SearchBar/SearchBar';
 import Button from "../../Components/Button/Button";
 import "./style.scss";
 
-export default function Home() {
+export default function Recipe() {
   const { data } = useContext(DataContext);
-  // useEffect(() => {
-  //   fetchRecipes("zucchini", "broccoli", "carrots")
-  // },[])
-
+  const { id } = useParams();
   return (
     <Container>
-      {/* {console.log(fetchRecipes("zucchini", "broccoli", "carrots"))} */}
-      <div className="create" >
-        <SearchBar />
-        <h2>Random meal for you</h2>
-        {data && <div></div>}
-        <Button text="click here for the recipe" />
-        {/* <Flex>
-          {
-            data &&
-            data.map((recipe) => {
-              return <Card key={recipe.id} title={recipe.title} image={recipe.image} />
-            })
-          }
-        </Flex> */}
-
-      </div>
+      <h1>{id}</h1>
     </Container>
   )
 }

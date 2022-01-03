@@ -135,3 +135,10 @@
   transform: rotate(45deg) translate(-40%);
   margin-top: 10px;
 }
+
+.card-links {
+  text-decoration: none;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}

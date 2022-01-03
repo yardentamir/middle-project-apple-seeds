@@ -25,7 +25,7 @@ const apiURL = "https://api.edamam.com/search?q=";
 const apiKey = "&app_key=37cd8d5d46ed6cdbf21f4dfbea7f3aff";
 const apiId = "&app_id=d02cac84";
 const maxTime = "&time=30";
-const maxIngreds = `&ingr=10`;
+const maxIngreds = `&ingr=20`;
 
 export const fetchRecipesIngredients = async (...ingredients) => {
   const mappedIngreds = ingredients

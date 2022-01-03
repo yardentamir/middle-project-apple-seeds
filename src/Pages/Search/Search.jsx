@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { DataContext } from '../../Context/dataContext';
 import { Container } from '../../Components/styles/Container.styled';
 import SearchBar from '../../Components/SearchBar/SearchBar';
 import Button from "../../Components/Button/Button";
@@ -7,15 +6,12 @@ import Card from "../../Components/Card/Card";
 import { Flex } from "../../Components/styles/Flex.styled";
 import MultiSelect from 'react-multiple-select-dropdown-lite';
 import { fetchRecipesIngredients } from '../../Utilities/api';
+import { debounce } from '../../Utilities/Functions';
 import 'react-multiple-select-dropdown-lite/dist/index.css'
 import "./style.scss";
 
 
 export default function Search() {
-  // useEffect(() => {
-  // fetchRecipes("zucchini", "broccoli", "carrots")
-  // }, [])
-  const { data2 } = useContext(DataContext);
   const ingredients = [
     { label: "zucchini", value: "zucchini" },
     { label: "broccoli", value: "broccoli" },
@@ -38,12 +34,13 @@ export default function Search() {
   const handelSearch = async () => {
     const result = (await fetchRecipesIngredients(multiSelected)).hits;
     setFetchedData(result);
+    console.log(result)
   }
 
   return (
     <Container>
       <h3>Search by Meal Name:</h3>
-      <SearchBar />
+      <SearchBar click={handelSearch} change={({ target: { value } }) => debounce(() => { setMultiSelected(value) }, 500)} />
       <h3>Search by Ingredients:</h3>
       <div className="multi-selection-wrapper">
         <MultiSelect
@@ -51,13 +48,12 @@ export default function Search() {
           options={ingredients}
         />
       </div>
-      <Button text="Search" callback={handelSearch} />
-      {console.log(fetchedData)}
+      <Button text="Search" callback={debounce(handelSearch, 500)} />
       <Flex>
         {
           fetchedData &&
           fetchedData.map(({ recipe }) => {
-            return <Card key={recipe.label} title={recipe.label} image={recipe.image} />
+            return <Card key={recipe.uri} title={recipe.label} image={recipe.image} id={recipe.label} />
           })
         }
       </Flex>
