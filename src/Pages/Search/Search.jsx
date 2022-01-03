@@ -31,10 +31,10 @@ export default function Search() {
   const [multiSelected, setMultiSelected] = useState('');
   const [fetchedData, setFetchedData] = useState([]);
 
-  // const handelSearch = async () => {
-  //   const result = (await fetchRecipesIngredients(multiSelected)).hits;
-  //   setFetchedData(result);
-  // }
+  const handelSearch = async () => {
+    const result = (await fetchRecipesIngredients(multiSelected)).hits;
+    setFetchedData(result);
+  }
 
   return (
     <Container>
@@ -52,7 +52,7 @@ export default function Search() {
         {
           fetchedData &&
           fetchedData.map(({ recipe }) => {
-            return <Card key={recipe.uri} title={recipe.label} image={recipe.image} id={recipe.label} />
+            return <Card key={recipe.uri} title={recipe.label} image={recipe.image} id={recipe.label} obj={recipe} />
           })
         }
       </Flex>

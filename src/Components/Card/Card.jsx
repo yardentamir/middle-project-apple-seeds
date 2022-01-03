@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import "./style.scss";
 
-export default function Card({ image, title, id }) {
+export default function Card({ image, title, id, obj }) {
 
 
   return (

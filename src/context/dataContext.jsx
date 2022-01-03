@@ -3,6 +3,7 @@ import { getRandomRecipes, fetchRecipesIngredients } from "../Utilities/api";
 
 export const DataContext = createContext();
 
+
 export function DataProvider({ children }) {
   const [data, setData] = useState();
   const [data2, setData2] = useState();
@@ -16,6 +17,7 @@ export function DataProvider({ children }) {
     }
     getData();
   }, [])
+
 
   return (
     <DataContext.Provider value={{ data, data2 }}>{children}</DataContext.Provider>
