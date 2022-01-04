@@ -1,6 +1,6 @@
 .image-overlay {
   position: relative;
-  width: 90%;
+  width: 100%;
   height: 95vh;
   display: flex;
   justify-content: center;
@@ -25,6 +25,7 @@
 .backward-image {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .text-on-img {
   font-size: 2em;

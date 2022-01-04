@@ -1,16 +1,16 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
-import { DataContext } from '../../Context/dataContext';
 import { Container } from '../../Components/styles/Container.styled';
 import Button from "../../Components/Button/Button";
 import { fetchRecipesIngredients } from '../../Utilities/api';
-import { filterObjByKey, renameKeys } from '../../Utilities/Functions';
+import { filterObjByKey } from '../../Utilities/Functions';
 import "./style.scss";
 
 export default function Recipe() {
   const { id } = useParams();
   const [fetchedData, setFetchedData] = useState([]);
   const keysFilterArr = ['text', 'quantity', 'food', 'image'];
+
   useEffect(() => {
     const getData = async () => {
       const result = (await fetchRecipesIngredients(id)).hits;
@@ -21,9 +21,6 @@ export default function Recipe() {
 
 
   const renderTitles = () => {
-    // const keysFilterObj = { text: 'Instructions', food: "type of food" };
-    // const renameedKeyObj = renameKeys(fetchedData[0].recipe.ingredients[0], keysFilterObj);
-    // console.log(renameedKeyObj)
     return Object.keys(filterObjByKey(fetchedData[0].recipe.ingredients[0], keysFilterArr)).map((key) => {
       return <th key={key}>{key}</th>
     })
@@ -41,15 +38,14 @@ export default function Recipe() {
   }
 
   const renderHealthLabels = () => {
-    return fetchedData[0].recipe.healthLabels.map((healthLabel) => <div>{healthLabel}</div>)
+    return fetchedData[0].recipe.healthLabels.map((healthLabel) => <div key={healthLabel}>{healthLabel}</div>)
   }
 
   return (
     <Container>
       {fetchedData[0] &&
         <>
-          {console.log(fetchedData[0].recipe)}
-          <h2>{id}</h2>
+          <h2>{fetchedData[0].recipe.label}</h2>
           <img src={fetchedData[0].recipe.image} alt={fetchedData[0].recipe.label} />
           <h4>calories</h4>
           <p>{fetchedData[0].recipe.calories}</p>
@@ -65,7 +61,6 @@ export default function Recipe() {
                 {renderTableRows()}
               </tbody>
             </table>
-
             <div>
               {renderHealthLabels()}
             </div>

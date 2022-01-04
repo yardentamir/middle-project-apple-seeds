@@ -32,15 +32,13 @@
   background: var(--card);
   border-radius: 20px;
   padding: 10px;
-  font-family: sans-serif;
   display: flex;
   color: var(--text);
   flex-direction: column;
-  // align-items: flex-start;
+  text-align: center;
 }
 
 .card img {
-  width: 160px;
   border-radius: 14px;
   object-fit: cover;
 }
@@ -69,9 +67,8 @@
   color: var(--price);
 }
 .card__shop__action {
-  /* height: 120%; */
+  height: 120%;
   display: flex;
-  width: 60%;
   padding: 5px;
   gap: 3px;
   font-size: 12px;
@@ -101,9 +98,9 @@
   .card {
     height: auto;
     width: auto;
+    flex: auto;
   }
-  .card img,
-  .card__shop__action {
+  .card image {
     width: auto;
   }
 
@@ -116,9 +113,12 @@
   height: 30px;
   width: 20px;
   border-radius: 100px 100px 0px 0px;
-  background-color: white;
   background-color: lightgray;
   float: right;
+  cursor: pointer;
+}
+.background-red {
+  background-color: red;
 }
 #heart {
   height: 20%;

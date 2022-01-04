@@ -1,5 +1,5 @@
 import React from 'react';
-import { logInWithGoogle, logOutWithGoogle, logInWithFacebook } from '../../Context/userContext';
+import { logInWithGoogle, logInWithFacebook } from '../../Context/userContext';
 import GoogleButton from '../../Components/GoogleButton/GoogleButton';
 import FacebookButton from '../../Components/FacebookButton/FacebookButton';
 import './style.scss';
@@ -13,7 +13,6 @@ export default function Login() {
           <div className="modal">
             <span id="close"><i className="lni lni-close"></i></span>
             <div className="modalContent">
-              {/* <img src="https://lilbotmedia.com/Outer_space.svg" alt="space rocket" /> */}
               <div className="modalInfo">
                 <h3>Log in</h3>
                 <p>We'll show you how to go to where no one has been to!</p>

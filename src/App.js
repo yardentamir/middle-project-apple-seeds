@@ -6,6 +6,7 @@ import { DataProvider } from "./Context/dataContext";
 import { UserProvider } from "./Context/userContext";
 import Recipe from "./Pages/Recipe/Recipe";
 import Search from "./Pages/Search/Search";
+import Favorite from "./Pages/Favorites/Favorites";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route path="/" exact element={<Home />} />
             <Route path="/recipe/" exact element={<Search />} />
+            <Route path="/favorite/" exact element={<Favorite />} />
             <Route path="/recipe/:id" exact element={<Recipe />} />
           </Routes>
         </UserProvider>

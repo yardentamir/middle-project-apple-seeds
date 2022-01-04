@@ -1,6 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { StyledHeader } from './style';
 import { UserContext } from '../../Context/userContext';
 import Login from '../../Pages/Login/Login';
 import LogOut from '../../Pages/Login/LogOut';
@@ -19,9 +18,6 @@ export default function Header() {
 
   return (
     <>
-      {/* <StyledHeader>
-      <h1>header</h1>
-    </StyledHeader> */}
       <header>
         <nav>
           <div className="container">
@@ -33,17 +29,8 @@ export default function Header() {
                 <button className="btn" id="nav-toggle">
                   <i className="fa fa-bars"></i></button>
               </li>
-              <li className="nav-link">My Favorites</li>
-              <Link to="/recipe" className="nav-link"> Search Recipes</Link>
-
-              {/* 
-              <li className="nav-link">Work<i className="fa fa-chevron-up"></i>
-                <ul className="nav-drop">
-                  <li>Portfolio</li>
-                  <li>Showcase</li>
-                </ul>
-              </li> */}
-
+              <Link to="/favorite" className="nav-link">My Favorites</Link>
+              <Link to="/recipe" className="nav-link">Search Recipes</Link>
               <Link to="/" className="nav-link">Home</Link>
               <li className="nav-item">
                 <div>{

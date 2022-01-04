@@ -22,6 +22,7 @@ export const logOutWithGoogle = () => {
   });
 }
 
+
 export const UserContext = createContext();
 
 export function UserProvider({ children }) {
@@ -36,7 +37,6 @@ export function UserProvider({ children }) {
       }
     });
   }, [])
-
 
   return (
     <UserContext.Provider value={{ currentUser }}>{children}</UserContext.Provider>

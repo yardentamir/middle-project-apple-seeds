@@ -18,7 +18,6 @@ export function DataProvider({ children }) {
     getData();
   }, [])
 
-
   return (
     <DataContext.Provider value={{ data, data2 }}>{children}</DataContext.Provider>
   )
