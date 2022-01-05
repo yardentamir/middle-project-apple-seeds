@@ -8,7 +8,7 @@ import { breakPoints } from '../../Utilities/Lists';
 import "./style.scss";
 
 export default function Home() {
-  const { randomData, EmdamamData } = useContext(DataContext);
+  const { randomData, EdamamData } = useContext(DataContext);
 
   return (<>
     {randomData &&
@@ -17,10 +17,10 @@ export default function Home() {
         <Container>
           <div>
             <h2 style={{ textAlign: 'center' }}>Recipes with Same Category:</h2>
-            {EmdamamData &&
+            {EdamamData &&
               <Carousel breakPoints={breakPoints}>
                 {
-                  EmdamamData.map(({ recipe }) => {
+                  EdamamData.map(({ recipe }) => {
                     return <Card key={recipe.uri.replace("http://www.edamam.com/ontologies/edamam.owl#recipe_", "")} title={recipe.label} image={recipe.image} id={recipe.uri.replace("http://www.edamam.com/ontologies/edamam.owl#recipe_", "")} obj={recipe} />
                   })
                 }

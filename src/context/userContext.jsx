@@ -1,15 +1,9 @@
 import { createContext, useState, useEffect } from "react";
 import { signInWithPopup, onAuthStateChanged, signOut } from "firebase/auth";
-import { auth, googleProvider, facebookProvider } from "../Utilities/firebase-config";
+import { auth, googleProvider } from "../Utilities/firebase-config";
 
 export const logInWithGoogle = () => {
   signInWithPopup(auth, googleProvider)
-    .then(result => { console.log("Signed in user", result.user); })
-    .catch(error => { console.log("Sign in error", error); })
-}
-
-export const logInWithFacebook = () => {
-  signInWithPopup(auth, facebookProvider)
     .then(result => { console.log("Signed in user", result.user); })
     .catch(error => { console.log("Sign in error", error); })
 }
@@ -21,7 +15,6 @@ export const logOutWithGoogle = () => {
     console.log('Sign-out', error);
   });
 }
-
 
 export const UserContext = createContext();
 

@@ -6,19 +6,23 @@ export const DataContext = createContext();
 
 export function DataProvider({ children }) {
   const [randomData, setRandomApiData] = useState();
-  const [EmdamamData, setEmdamamData] = useState();
+  const [EdamamData, setEmdamamData] = useState();
 
   useEffect(() => {
     const getData = async () => {
-      const randomResults = await getRandomRecipes();
-      setRandomApiData(randomResults.meals[0]);
-      const EmdamamResults = await fetchRecipesIngredients(randomResults.meals[0].strCategory);
-      setEmdamamData(EmdamamResults.hits);
+      try {
+        const randomResults = await getRandomRecipes();
+        setRandomApiData(randomResults.meals[0]);
+        const EdamamResults = await fetchRecipesIngredients(randomResults.meals[0].strCategory);
+        setEmdamamData(EdamamResults.hits);
+      } catch (error) {
+        console.log(error);
+      }
     }
     getData();
   }, [])
 
   return (
-    <DataContext.Provider value={{ randomData, EmdamamData }}>{children}</DataContext.Provider>
+    <DataContext.Provider value={{ randomData, EdamamData }}>{children}</DataContext.Provider>
   )
 }

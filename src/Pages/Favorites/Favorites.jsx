@@ -3,7 +3,6 @@ import { Container } from '../../Components/styles/Container.styled';
 import Card from "../../Components/Card/Card";
 import { Flex } from "../../Components/styles/Flex.styled";
 import 'react-multiple-select-dropdown-lite/dist/index.css'
-import "./style.scss";
 
 
 export default function Favorite() {
