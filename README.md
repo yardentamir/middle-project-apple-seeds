@@ -2,10 +2,10 @@
 
 ## API LIST
 
-1. Themealdb - Brings one randomize recipe every fetch
+1. Themealdb - Brings one randomize recipe every fetch.
 About: An open, crowd-sourced database of Recipes from around the world.
 
-2. Emadam - Brings list of recipes by Ingredients, Name of the Meal, time and number
+2. Emadam - Brings list of recipes by Ingredients, Name of the Meal, time and number.
 About: Edamam organizes the world's food knowledge in one central database and delivers value added services,
 such as real-time nutrition analysis and diet-driven meal recommendations.
 The company leverages the power of data and technology to help people eat better and live healthier and happier lives.
