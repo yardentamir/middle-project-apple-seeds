@@ -33,18 +33,24 @@ Using the uniq to fetch the current Recipe.
 
 #### show data to the screen:
 Using loops throughout the objects by their entries and map thouth them also filter only the relevant information.
+
+example:
 ```
   const renderIngredientsTableRows = () => {
     return fetchedData[0].recipe.ingredients.map((val, index) => {
       return (
         <tr key={val + index}>{Object.entries(filterObjByKey(val, keysFilterArrIngredients)).map((valArrKeyValue, index) => {
-          return valArrKeyValue[0] === "image" ? <td key={valArrKeyValue[1] + index}><img src={valArrKeyValue[1]} alt={valArrKeyValue[1]} /></td> : <td key={valArrKeyValue[1] + index}>{valArrKeyValue[1]}</td>
+          return valArrKeyValue[0] === "image" ? 
+          <td key={valArrKeyValue[1] + index}><img src={valArrKeyValue[1]} alt={valArrKeyValue[1]} /></td> 
+          : <td key={valArrKeyValue[1] + index}>{valArrKeyValue[1]}</td>
         })}
         </tr>
       )
     })
   }
   ```
-### `npm run eject`
+### search
+
+
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
