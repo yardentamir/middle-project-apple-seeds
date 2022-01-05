@@ -42,7 +42,7 @@ example:
     return ingredientsArray.map((val, index) => {
       return (
         <tr key={val}>{Object.entries(filterObjByKey(val, keysFilterArrIngredients)).map((valArrKeyValue, index) => {
-          return <td key={valArrKeyValue[1] + index}>{valArrKeyValue[1]}</td>
+          return <td key={valArrKeyValue[1]}>{valArrKeyValue[1]}</td>
         })}
         </tr>
       )
