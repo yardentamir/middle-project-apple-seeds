@@ -98,4 +98,3 @@ export function debounce(func, duration) {
 2. Add more search options
 3. Add Youtube videos
 4. Use new styling and animations features such as Styled Components, Matirial UI, etc...
-
