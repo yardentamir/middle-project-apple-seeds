@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { UserContext } from '../../Context/userContext';
+import { UserContext } from '../../context/userContext';
 import Login from '../../Pages/Login/Login';
 import LogOut from '../../Pages/Login/LogOut';
 import './style.scss';

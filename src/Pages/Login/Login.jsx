@@ -1,5 +1,5 @@
 import React from 'react';
-import { logInWithGoogle, logInWithFacebook } from '../../Context/userContext';
+import { logInWithGoogle, logInWithFacebook } from '../../context/userContext';
 import GoogleButton from '../../Components/GoogleButton/GoogleButton';
 import FacebookButton from '../../Components/FacebookButton/FacebookButton';
 import './style.scss';

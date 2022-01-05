@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { DataContext } from '../../Context/dataContext';
+import { DataContext } from '../../context/dataContext';
 import { Container } from '../../Components/styles/Container.styled';
 import Card from "../../Components/Card/Card";
 import ImageOverlay from '../../Components/ImageOverlay/ImageOverlay';

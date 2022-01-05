@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { logOutWithGoogle } from '../../Context/userContext';
+import { logOutWithGoogle } from '../../context/userContext';
 import GoogleButton from '../../Components/GoogleButton/GoogleButton';
 import './style.scss';
 

@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-import { getRandomRecipes, fetchRecipesIngredients } from "../Utilities/api"; //
+import { getRandomRecipes, fetchRecipesIngredients } from "../Utilities/api";
 
 export const DataContext = createContext();
 
