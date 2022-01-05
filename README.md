@@ -48,9 +48,49 @@ example:
       )
     })
   }
+  
+  // utility function
+  export function filterObjByKey(objToFilter, onlyTheseKeysArr) {
+  const filtered = Object.keys(objToFilter)
+    .filter((key) => onlyTheseKeysArr.includes(key))
+    .reduce((obj, key) => {
+      obj[key] = objToFilter[key];
+      return obj;
+    }, {});
+
+  return filtered;
+}
   ```
 ### search
 
+Two ways to search:
+1. search by Meal Name - A Full String. Example: "Pizza".
+2. search by Ingredients - List of Strings, can choose from dropdown list or by typing. Example: "Eggs,Beed,Lemon".
+
+#### Fixing the spam clicking problem in order to prevent unnecessary api fetches by using a utility dobounce function:
+
+```
+// utility function
+export function debounce(func, duration) {
+  let timeout;
+  return function (...args) {
+    const effect = () => {
+      timeout = null;
+      return func.apply(this, args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(effect, duration);
+  };
+}
+  ```
+  
+  ### favorites
+  
+  checks LocalStorage and print all the favorites.
+  
+  #### handel localStorage:
+  when user clicks on heart symbol that in the recipe:
+  1. adding/removing to/from localStorage
+  2. toggle background color: gray/red
 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
