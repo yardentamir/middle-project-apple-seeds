@@ -3,7 +3,6 @@ import { Container } from '../../Components/styles/Container.styled';
 import SearchBar from '../../Components/SearchBar/SearchBar';
 import Button from "../../Components/Button/Button";
 import Card from "../../Components/Card/Card";
-import Spinner from "../../Components/Spinner/Spinner";
 import { Flex } from "../../Components/styles/Flex.styled";
 import MultiSelect from 'react-multiple-select-dropdown-lite';
 import { fetchRecipesIngredients } from '../../Utilities/api';

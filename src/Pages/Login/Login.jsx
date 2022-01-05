@@ -15,7 +15,7 @@ export default function Login() {
             <div className="modalContent">
               <div className="modalInfo">
                 <h3>Log in</h3>
-                <p>We'll show you how to go to where no one has been to!</p>
+                <p>Welcome, please log in!</p>
                 <div className="social-login">
                   <GoogleButton callback={logInWithGoogle} text="Sign in with Google" />
                   <FacebookButton callback={logInWithFacebook} text="Sign in with Facebook" />

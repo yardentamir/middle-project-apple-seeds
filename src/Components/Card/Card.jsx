@@ -26,9 +26,9 @@ export default function Card({ image, title, id, obj }) {
 
   return (
     <div className="card">
-      <div id="heart" onClick={toggleFavorite} >
-        <div id="left" className={`segments ${isFavoriteState && "background-red"}`} ></div>
-        <div id="right" className={`segments ${isFavoriteState && "background-red"}`}></div>
+      <div className="heart" onClick={toggleFavorite} >
+        <div className={`segments left-heart ${isFavoriteState && "background-red"}`} ></div>
+        <div className={`segments right-heart ${isFavoriteState && "background-red"}`}></div>
       </div>
       <img src={image} alt={title} />
       <h2 className="card__title">{title}</h2>

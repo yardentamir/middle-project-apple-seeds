@@ -5,4 +5,5 @@ display:flex;
 align-items:center;
 flex-wrap: wrap;
 justify-content: center;
+gap: 15px;
 `

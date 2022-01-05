@@ -21,7 +21,7 @@
   outline: none;
   background: var(--secondary);
   transition: background 0.3s;
-  border-radius: 50%;
+  border-radius: 55%;
   cursor: pointer;
   color: #fff;
 }
@@ -109,26 +109,25 @@
   width: 20px;
   border-radius: 100px 100px 0px 0px;
   background-color: lightgray;
+  transition: background-color 0.4s ease-in-out;
   float: right;
   cursor: pointer;
 }
 .background-red {
+  transition: background-color 0.4s ease-in-out;
   background-color: red;
 }
-#heart {
-  height: 20%;
+.heart {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   padding: 10px;
-}
-#heart > #left {
-  transform: rotate(-45deg) translate(40%);
-  margin-top: 10px;
-}
-#heart > #right {
-  transform: rotate(45deg) translate(-40%);
-  margin-top: 10px;
+  > .left-heart {
+    transform: rotate(-50deg) translate(40%);
+  }
+  > .right-heart {
+    transform: rotate(50deg) translate(-40%);
+  }
 }
 
 .card-links {

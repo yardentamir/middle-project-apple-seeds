@@ -31,8 +31,8 @@ export default function Recipe() {
   const renderIngredientsTableRows = () => {
     return fetchedData[0].recipe.ingredients.map((val, index) => {
       return (
-        <tr key={val + index}>{Object.entries(filterObjByKey(val, keysFilterArrIngredients)).map((key, index) => {
-          return key[0] === "image" ? <td key={key[1] + index}><img src={key[1]} alt={key[1]} /></td> : <td key={key[1] + index}>{key[1]}</td>
+        <tr key={val + index}>{Object.entries(filterObjByKey(val, keysFilterArrIngredients)).map((valArrKeyValue, index) => {
+          return valArrKeyValue[0] === "image" ? <td key={valArrKeyValue[1] + index}><img src={valArrKeyValue[1]} alt={valArrKeyValue[1]} /></td> : <td key={valArrKeyValue[1] + index}>{valArrKeyValue[1]}</td>
         })}
         </tr>
       )
@@ -40,11 +40,10 @@ export default function Recipe() {
   }
 
   const renderTableNutrientsRows = () => {
-    return Object.entries(fetchedData[0].recipe.totalNutrients).map((val, index) => {
+    return Object.entries(fetchedData[0].recipe.totalNutrients).map((valArrKeyValue, index) => {
       return (
-        <tr key={val + index}>{Object.entries(filterObjByKey(val[1], keysFilterArrNutrients)).map((key, index) => {
-          console.log(key[0], key[1]);
-          return key[0] === "quantity" ? <td key={key[1] + index}>{key[1] + val[1].unit}</td> : <td key={key[1] + index}>{key[1]}</td>
+        <tr key={valArrKeyValue + index}>{Object.entries(filterObjByKey(valArrKeyValue[1], keysFilterArrNutrients)).map((valArrKeyValue2, index) => {
+          return valArrKeyValue2[0] === "quantity" ? <td key={valArrKeyValue2[1] + index}>{valArrKeyValue2[1] + valArrKeyValue[1].unit}</td> : <td key={valArrKeyValue2[1] + index}>{valArrKeyValue2[1]}</td>
         })}
         </tr>
       )
@@ -57,7 +56,6 @@ export default function Recipe() {
     <Container>
       {fetchedData[0] &&
         <>
-          {/* {console.log(fetchedData[0].recipe)} */}
           <h2>{fetchedData[0].recipe.label}</h2>
           <FlexLeft>
             <div>
@@ -74,13 +72,13 @@ export default function Recipe() {
               <p>{fetchedData[0].recipe.totalTime}</p>
             </div>
           </FlexLeft>
-          <Table title="Ingredients" renderTitles={() => renderTitles(fetchedData[0].recipe.ingredients[0], keysFilterArrIngredients)} renderTableRows={renderIngredientsTableRows} />
           <div className="tags">
             <h3>Health Tags</h3>
             <ul>
               {renderArrayLabels(fetchedData[0].recipe.healthLabels)}
             </ul>
           </div>
+          <Table title="Ingredients" renderTitles={() => renderTitles(fetchedData[0].recipe.ingredients[0], keysFilterArrIngredients)} renderTableRows={renderIngredientsTableRows} />
           <Table title="Nutrients" renderTitles={() => renderTitles(fetchedData[0].recipe.totalNutrients.CA, keysFilterArrNutrients)} renderTableRows={renderTableNutrientsRows} />
         </>
       }

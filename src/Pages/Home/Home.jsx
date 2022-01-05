@@ -13,13 +13,9 @@ export default function Home() {
   return (<>
     {randomData &&
       <>
-        {console.log(randomData)}
         <ImageOverlay img={randomData.strMealThumb} text={randomData.strMeal} />
         <Container>
           <div>
-            <div className="iframe-wrapper">
-              <iframe className="responsive-iframe" key={randomData.idMeal} src={randomData.strYoutube.replace('/watch?v=', "/embed/")} title={randomData.strMeal} width="420" height="315" frameBorder="0" allowFullScreen></iframe>
-            </div>
             <h2 style={{ textAlign: 'center' }}>Recipes with Same Category:</h2>
             {EmdamamData &&
               <Carousel breakPoints={breakPoints}>
