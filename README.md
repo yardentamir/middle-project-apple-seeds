@@ -93,4 +93,9 @@ export function debounce(func, duration) {
   1. adding/removing to/from localStorage
   2. toggle background color: gray/red
 
+## FUTURE PLANS
+1. Connect to user data
+2. Add more search options
+3. Add Youtube videos
+4. Use new styling and animations features such as Styled Components, Matirial UI, etc...
 
