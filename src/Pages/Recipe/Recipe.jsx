@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import { Container } from '../../Components/styles/Container.styled';
-import Button from "../../Components/Button/Button";
 import { fetchRecipesIngredients } from '../../Utilities/api';
 import { filterObjByKey } from '../../Utilities/Functions';
 import "./style.scss";
@@ -17,7 +16,7 @@ export default function Recipe() {
       setFetchedData(result);
     }
     getData();
-  }, [])
+  }, [id])
 
 
   const renderTitles = () => {
@@ -47,9 +46,9 @@ export default function Recipe() {
         <>
           <h2>{fetchedData[0].recipe.label}</h2>
           <img src={fetchedData[0].recipe.image} alt={fetchedData[0].recipe.label} />
-          <h4>calories</h4>
+          <h3>calories</h3>
           <p>{fetchedData[0].recipe.calories}</p>
-          <h4>Ingredients</h4>
+          <h3>Ingredients</h3>
           <div className="container-table">
             <table>
               <thead>

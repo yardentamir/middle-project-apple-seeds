@@ -23,20 +23,17 @@ export default function Header() {
           <div className="container">
             <ul className="nav-list">
               <li className="nav-logo">
-                <div className="logo">
-                  <i className="fab fa-sass"></i>
+                <div>
+                  <div>{
+                    currentUser ? <button onClick={() => setIsSignInClick(true)} className="btn">{currentUser.providerData[0].displayName[0]}</button> : <button onClick={() => setIsSignInClick(true)} className="btn">Sign in</button>
+                  }</div>
                 </div>
                 <button className="btn" id="nav-toggle">
                   <i className="fa fa-bars"></i></button>
               </li>
-              <Link to="/favorite" className="nav-link">My Favorites</Link>
-              <Link to="/recipe" className="nav-link">Search Recipes</Link>
               <Link to="/" className="nav-link">Home</Link>
-              <li className="nav-item">
-                <div>{
-                  currentUser ? <button onClick={() => setIsSignInClick(true)} className="btn">{currentUser.providerData[0].displayName[0]}</button> : <button onClick={() => setIsSignInClick(true)} className="btn">Sign in</button>
-                }</div>
-              </li>
+              <Link to="/recipe" className="nav-link">Search Recipes</Link>
+              <Link to="/favorite" className="nav-link">My Favorites</Link>
             </ul>
           </div>
         </nav>
