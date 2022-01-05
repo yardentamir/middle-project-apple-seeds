@@ -4,14 +4,17 @@
 
 1. Themealdb - Brings one randomize recipe every fetch
 About: An open, crowd-sourced database of Recipes from around the world.
-4. 
-5. Emadam - Brings list of recipes by Ingredients, Name of the Meal, time and number
-About:
-Edamam organizes the world's food knowledge in one central database and delivers value added services,
+
+2. Emadam - Brings list of recipes by Ingredients, Name of the Meal, time and number
+About: Edamam organizes the world's food knowledge in one central database and delivers value added services,
 such as real-time nutrition analysis and diet-driven meal recommendations.
 The company leverages the power of data and technology to help people eat better and live healthier and happier lives.
 
 ## PAGES
+
+### login
+
+login and log out popups with buttons
 
 ### home
 
@@ -21,16 +24,27 @@ categories in accordance with the Randomize Recipe Api
 #### Fetch:
 Using the end of the uri value from the fetched data for the uniq id: http://www.edamam.com/ontologies/edamam.owl#recipe_${thisIsTheId}
 
-### `npm run build`
+### Recipe
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Information about the recipe: Ingredients, Nutrients, Health Tags, Calories, Dish Type, Meal Type and Total Time.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Fetch:
+Using the uniq to fetch the current Recipe.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
+#### show data to the screen:
+Using loops throughout the objects by their entries and map thouth them also filter only the relevant information.
+```
+  const renderIngredientsTableRows = () => {
+    return fetchedData[0].recipe.ingredients.map((val, index) => {
+      return (
+        <tr key={val + index}>{Object.entries(filterObjByKey(val, keysFilterArrIngredients)).map((valArrKeyValue, index) => {
+          return valArrKeyValue[0] === "image" ? <td key={valArrKeyValue[1] + index}><img src={valArrKeyValue[1]} alt={valArrKeyValue[1]} /></td> : <td key={valArrKeyValue[1] + index}>{valArrKeyValue[1]}</td>
+        })}
+        </tr>
+      )
+    })
+  }
+  ```
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
