@@ -167,10 +167,10 @@ nav {
   nav {
     .nav-list {
       .nav-item {
-        display: flex !important;
+        display: flex;
       }
       .nav-link {
-        display: flex !important;
+        display: flex;
       }
     }
   }
@@ -178,6 +178,9 @@ nav {
 
 // hide nav link and items below break point and show toggle btn
 @media screen and(max-width: $break-point) {
+  .toggle-display-none {
+    display: none !important;
+  }
   nav {
     padding: 1rem 0;
     .nav-list {
@@ -220,4 +223,8 @@ nav {
       }
     }
   }
+}
+
+.toggle-display-none {
+  display: block;
 }
