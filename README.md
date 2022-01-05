@@ -2,7 +2,7 @@
 
 ## PROJECT LINK
 
-[RecipeSite]https://yarden-tamir-apple-seeds-middle-project.netlify.app/favorite
+[RecipeSite](https://yarden-tamir-apple-seeds-middle-project.netlify.app)
 
 ## API LIST
 
