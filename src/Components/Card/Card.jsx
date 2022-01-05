@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { checkIfRecipeExisted } from "../../Utilities/Functions";
 import "./style.scss";
 
 export default function Card({ image, title, id, obj }) {
@@ -7,18 +8,8 @@ export default function Card({ image, title, id, obj }) {
   const [isFavoriteState, setIsFavoriteState] = useState(true);
 
   useEffect(() => {
-
-    const checkIfExisted = (favoriteStorage) => {
-      let flag = false;
-      favoriteStorage.forEach((favorite) => {
-        if (favorite.uri === obj.uri) {
-          flag = true;
-        }
-      })
-      return flag;
-    }
     const favoriteStorage = JSON.parse(localStorage.getItem('favoriteUserList')) || [];
-    if (!checkIfExisted(favoriteStorage)) {
+    if (!checkIfRecipeExisted(favoriteStorage, obj)) {
       setIsFavoriteState(false);
     }
   }, [obj])

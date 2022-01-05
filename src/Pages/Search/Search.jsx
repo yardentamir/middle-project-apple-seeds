@@ -3,6 +3,7 @@ import { Container } from '../../Components/styles/Container.styled';
 import SearchBar from '../../Components/SearchBar/SearchBar';
 import Button from "../../Components/Button/Button";
 import Card from "../../Components/Card/Card";
+import Spinner from "../../Components/Spinner/Spinner";
 import { Flex } from "../../Components/styles/Flex.styled";
 import MultiSelect from 'react-multiple-select-dropdown-lite';
 import { fetchRecipesIngredients } from '../../Utilities/api';
@@ -22,10 +23,11 @@ export default function Search() {
   }
 
   return (
-    <Container>
-      <h3>Search by Meal Name:</h3>
-      <SearchBar click={handelSearch} change={({ target: { value } }) => debounce(setMultiSelected(value), 500)} />
-      <h3>Search by Ingredients:</h3>
+    <Container style={{ textAlign: 'center' }}>
+      <h4>Search by Meal Name</h4>
+      <SearchBar className="multi-selection-wrapper" click={handelSearch} change={({ target: { value } }) => debounce(setMultiSelected(value), 500)} />
+      <p>or</p>
+      <h4>Search by Ingredients</h4>
       <div className="multi-selection-wrapper">
         <MultiSelect
           onChange={setMultiSelected}
@@ -35,7 +37,6 @@ export default function Search() {
       <Button text="Search" callback={debounce(handelSearch, 500)} />
       <Flex>
         {
-          fetchedData &&
           fetchedData.map(({ recipe }) => {
             return <Card key={recipe.uri.replace("http://www.edamam.com/ontologies/edamam.owl#recipe_", "")} title={recipe.label} image={recipe.image} id={recipe.uri.replace("http://www.edamam.com/ontologies/edamam.owl#recipe_", "")} obj={recipe} />
           })

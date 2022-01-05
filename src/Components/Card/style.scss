@@ -1,9 +1,8 @@
 :root {
-  --secondary: linear-gradient(221deg, #8743ff, #4136f1 60%);
+  --secondary: linear-gradient(221deg, #e28da9, #ea0078 60%);
   --body: #eaf2ff;
   --card: #fff;
   --text: #000;
-  --price: #4136f1;
 }
 
 .main-div.dark {
@@ -63,13 +62,9 @@
   align-items: center;
   justify-content: center;
 }
-.card__shop__price {
-  color: var(--price);
-}
 .card__shop__action {
   height: 120%;
   display: flex;
-  padding: 5px;
   gap: 3px;
   font-size: 12px;
   outline: none;

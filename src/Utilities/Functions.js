@@ -20,3 +20,17 @@ export function filterObjByKey(objToFilter, onlyTheseKeysArr) {
 
   return filtered;
 }
+
+export const renderArrayLabels = (arrToMap) => {
+  return arrToMap.map((item) => <li key={item}>{item}</li>);
+};
+
+export const checkIfRecipeExisted = (favoriteStorage, obj) => {
+  let flag = false;
+  favoriteStorage.forEach((favorite) => {
+    if (favorite.uri === obj.uri) {
+      flag = true;
+    }
+  });
+  return flag;
+};

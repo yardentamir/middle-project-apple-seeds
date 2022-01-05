@@ -2,26 +2,27 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  margin: 10px 0;
 }
 
 .searchTerm {
-  border: 5px solid #cc0055;
+  border: 1px solid #888787;
   border-right: none;
   padding: 5px;
   outline: none;
-  min-width: 70%;
+  width: 66.5%;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   font-family: "Poppins", sans-serif;
 
   &:focus {
-    color: #cc0070;
+    color: #888787;
   }
 }
 
 .searchButton {
-  border: 1px solid #cc0055;
-  background: #cc0055;
+  border: 1px solid #888787;
+  background: #888787;
   text-align: center;
   color: #fff;
   border-radius: 0 5px 5px 0;

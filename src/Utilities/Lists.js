@@ -16,3 +16,10 @@ export const ingredients = [
   { label: "beef", value: "beef" },
   { label: "lemon", value: "lemon" },
 ];
+
+export const breakPoints = [
+  { width: 1, itemsToShow: 1 },
+  { width: 100, itemsToShow: 2 },
+  { width: 200, itemsToShow: 3 },
+  { width: 300, itemsToShow: 4 },
+];
